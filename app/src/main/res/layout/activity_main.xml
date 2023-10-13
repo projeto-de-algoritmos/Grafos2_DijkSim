@@ -18,463 +18,547 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="1000dp"
                 android:layout_height="match_parent"
-                android:background="#F1E4E1">
+                android:background="#F6F1DE">
 
                 <TextView
                     android:id="@+id/aresta_AB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="58dp"
+                    android:layout_marginTop="188dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-48"
                     android:text="______3______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="58dp"
-                    tools:layout_editor_absoluteY="188dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_CE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="82dp"
+                    android:layout_marginTop="347dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-51"
                     android:text="________5________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="82dp"
-                    tools:layout_editor_absoluteY="347dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_CG"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="426dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="21"
                     android:text="__________10__________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="110dp"
-                    tools:layout_editor_absoluteY="426dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_DG"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="507dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-38"
                     android:text="__________12__________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="119dp"
-                    tools:layout_editor_absoluteY="507dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_BE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="107dp"
+                    android:layout_marginTop="219dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="77"
                     android:text="_________6_________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="107dp"
-                    tools:layout_editor_absoluteY="219dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_EG"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="148dp"
+                    android:layout_marginTop="371dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="67"
                     android:text="____________7____________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="148dp"
-                    tools:layout_editor_absoluteY="371dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_GI"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="266dp"
+                    android:layout_marginTop="466dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="15"
                     android:text="________3________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="266dp"
-                    tools:layout_editor_absoluteY="466dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_GL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="248dp"
+                    android:layout_marginTop="405dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-38"
                     android:text="___________20___________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="248dp"
-                    tools:layout_editor_absoluteY="405dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_IL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="328dp"
+                    android:layout_marginTop="426dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-82"
                     android:text="________18________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="328dp"
-                    tools:layout_editor_absoluteY="426dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_HL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="328dp"
+                    android:layout_marginTop="307dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="54"
                     android:text="______6______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="328dp"
-                    tools:layout_editor_absoluteY="307dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_BH"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="148dp"
+                    android:layout_marginTop="200dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="31"
                     android:text="______________27______________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="148dp"
-                    tools:layout_editor_absoluteY="200dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_BF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="127dp"
+                    android:layout_marginTop="115dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-36"
                     android:text="_______4_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="127dp"
-                    tools:layout_editor_absoluteY="115dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_FJ"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="114dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="36"
                     android:text="_______4_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="235dp"
-                    tools:layout_editor_absoluteY="114dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_JH"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="291dp"
+                    android:layout_marginTop="207dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="90"
                     android:text="______12______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="291dp"
-                    tools:layout_editor_absoluteY="207dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_JN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="328dp"
+                    android:layout_marginTop="181dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="41"
                     android:text="______10______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="328dp"
-                    tools:layout_editor_absoluteY="181dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_JN2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="348dp"
+                    android:layout_marginTop="288dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-86"
                     android:text="________8_________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="348dp"
-                    tools:layout_editor_absoluteY="288dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_KN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="359dp"
+                    android:layout_marginTop="146dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-90"
                     android:text="______15_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="359dp"
-                    tools:layout_editor_absoluteY="146dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_LM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="408dp"
+                    android:layout_marginTop="384dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="35"
                     android:text="______5_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="408dp"
-                    tools:layout_editor_absoluteY="384dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_MN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="360dp"
+                    android:layout_marginTop="310dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="71"
                     android:text="_______________12_______________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="360dp"
-                    tools:layout_editor_absoluteY="310dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_MO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="370dp"
+                    android:layout_marginTop="288dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-86"
                     android:text="____________________17_____________________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="370dp"
-                    tools:layout_editor_absoluteY="288dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_NO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="398dp"
+                    android:layout_marginTop="172dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-35"
                     android:text="_________5________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="398dp"
-                    tools:layout_editor_absoluteY="172dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_KO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="423dp"
+                    android:layout_marginTop="103dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="28"
                     android:text="_______9_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="423dp"
-                    tools:layout_editor_absoluteY="103dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_MP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="494dp"
+                    android:layout_marginTop="466dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="51"
                     android:text="_______2_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="494dp"
-                    tools:layout_editor_absoluteY="466dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_MT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="480dp"
+                    android:layout_marginTop="397dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-15"
                     android:text="___________6___________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="480dp"
-                    tools:layout_editor_absoluteY="397dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_QT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="551dp"
+                    android:layout_marginTop="321dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="71"
                     android:text="________19________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="551dp"
-                    tools:layout_editor_absoluteY="321dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_PT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="524dp"
+                    android:layout_marginTop="447dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-67"
                     android:text="__________7__________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="524dp"
-                    tools:layout_editor_absoluteY="447dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_OR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="524dp"
+                    android:layout_marginTop="114dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-18"
                     android:text="________1________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="524dp"
-                    tools:layout_editor_absoluteY="114dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_OS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="530dp"
+                    android:layout_marginTop="181dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="28"
                     android:text="_____________5_____________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="530dp"
-                    tools:layout_editor_absoluteY="181dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_QS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="569dp"
+                    android:layout_marginTop="248dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-18"
                     android:text="__________8__________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="569dp"
-                    tools:layout_editor_absoluteY="248dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_RS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="601dp"
+                    android:layout_marginTop="162dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="61"
                     android:text="__________4__________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="601dp"
-                    tools:layout_editor_absoluteY="162dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_ST"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="577dp"
+                    android:layout_marginTop="307dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-64"
                     android:text="___________12___________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="577dp"
-                    tools:layout_editor_absoluteY="307dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_SZ"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="713dp"
+                    android:layout_marginTop="219dp"
                     android:fontFamily="sans-serif-black"
                     android:text="___________15___________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="713dp"
-                    tools:layout_editor_absoluteY="219dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_SV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="672dp"
+                    android:layout_marginTop="183dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-48"
                     android:text="_________9_______"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="672dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_VZ"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="774dp"
+                    android:layout_marginTop="172dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="41"
                     android:text="_________9________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="774dp"
-                    tools:layout_editor_absoluteY="172dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_SW"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="685dp"
+                    android:layout_marginTop="260dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="44"
                     android:text="__________4_________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="685dp"
-                    tools:layout_editor_absoluteY="260dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_TU"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="613dp"
+                    android:layout_marginTop="407dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="31"
                     android:text="_________11_________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="613dp"
-                    tools:layout_editor_absoluteY="407dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_UW"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="699dp"
+                    android:layout_marginTop="386dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-65"
                     android:text="_________2_________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="699dp"
-                    tools:layout_editor_absoluteY="386dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_UY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="749dp"
+                    android:layout_marginTop="436dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-5"
                     android:text="_____________3_____________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="749dp"
-                    tools:layout_editor_absoluteY="436dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_XY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="818dp"
+                    android:layout_marginTop="484dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="-48"
                     android:text="__________2__________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="818dp"
-                    tools:layout_editor_absoluteY="484dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_UX"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="735dp"
+                    android:layout_marginTop="488dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="44"
                     android:text="_________6_________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="735dp"
-                    tools:layout_editor_absoluteY="488dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aresta_WY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="794dp"
+                    android:layout_marginTop="371dp"
                     android:fontFamily="sans-serif-black"
                     android:rotation="40"
                     android:text="___________1___________"
-                    android:textColorHighlight="#282828"
-                    tools:layout_editor_absoluteX="794dp"
-                    tools:layout_editor_absoluteY="371dp" />
+                    android:textColor="#4D4C47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_A"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="219dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -484,15 +568,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="A"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="41dp"
-                    tools:layout_editor_absoluteY="219dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_B"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="133dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -502,15 +588,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="B"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="119dp"
-                    tools:layout_editor_absoluteY="133dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_C"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="384dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -520,15 +608,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="C"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="78dp"
-                    tools:layout_editor_absoluteY="384dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_D"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="107dp"
+                    android:layout_marginTop="538dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -538,15 +628,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="D"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="107dp"
-                    tools:layout_editor_absoluteY="538dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_E"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="279dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -556,15 +648,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="E"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="160dp"
-                    tools:layout_editor_absoluteY="279dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_F"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="207dp"
+                    android:layout_marginTop="72dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -574,15 +668,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="F"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="207dp"
-                    tools:layout_editor_absoluteY="72dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_G"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="233dp"
+                    android:layout_marginTop="445dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -592,15 +688,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="G"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="233dp"
-                    tools:layout_editor_absoluteY="445dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_H"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="307dp"
+                    android:layout_marginTop="248dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -610,15 +708,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="H"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="307dp"
-                    tools:layout_editor_absoluteY="248dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_I"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="359dp"
+                    android:layout_marginTop="476dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -628,15 +728,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="I"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="359dp"
-                    tools:layout_editor_absoluteY="476dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_J"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="307dp"
+                    android:layout_marginTop="133dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -646,15 +748,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="J"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="307dp"
-                    tools:layout_editor_absoluteY="133dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_L"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="380dp"
+                    android:layout_marginTop="340dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -664,15 +768,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="L"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="380dp"
-                    tools:layout_editor_absoluteY="340dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_Z"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="858dp"
+                    android:layout_marginTop="207dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -682,15 +788,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="Z"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="858dp"
-                    tools:layout_editor_absoluteY="207dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_M"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="475dp"
+                    android:layout_marginTop="405dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -700,15 +808,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="M"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="475dp"
-                    tools:layout_editor_absoluteY="405dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_N"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="393dp"
+                    android:layout_marginTop="198dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -718,15 +828,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="N"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="393dp"
-                    tools:layout_editor_absoluteY="198dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_O"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="499dp"
+                    android:layout_marginTop="122dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -736,15 +848,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="O"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="499dp"
-                    tools:layout_editor_absoluteY="122dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_P"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="551dp"
+                    android:layout_marginTop="495dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -754,15 +868,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="P"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="551dp"
-                    tools:layout_editor_absoluteY="495dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_Q"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="556dp"
+                    android:layout_marginTop="248dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -772,15 +888,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="Q"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="556dp"
-                    tools:layout_editor_absoluteY="248dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_R"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="604dp"
+                    android:layout_marginTop="83dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -790,15 +908,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="R"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="604dp"
-                    tools:layout_editor_absoluteY="83dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_S"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="676dp"
+                    android:layout_marginTop="207dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -808,15 +928,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="S"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="676dp"
-                    tools:layout_editor_absoluteY="207dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_T"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="606dp"
+                    android:layout_marginTop="366dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -826,15 +948,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="T"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="606dp"
-                    tools:layout_editor_absoluteY="366dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_U"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="718dp"
+                    android:layout_marginTop="434dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -844,15 +968,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="U"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="718dp"
-                    tools:layout_editor_absoluteY="434dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_V"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="754dp"
+                    android:layout_marginTop="115dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -862,15 +988,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="V"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="754dp"
-                    tools:layout_editor_absoluteY="115dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_W"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="778dp"
+                    android:layout_marginTop="307dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -880,15 +1008,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="W"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="778dp"
-                    tools:layout_editor_absoluteY="307dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_X"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="811dp"
+                    android:layout_marginTop="526dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -898,15 +1028,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="X"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="811dp"
-                    tools:layout_editor_absoluteY="526dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_Y"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="909dp"
+                    android:layout_marginTop="416dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -916,15 +1048,17 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="Y"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="909dp"
-                    tools:layout_editor_absoluteY="416dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_K"
                     android:layout_width="41dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="#282828"
+                    android:layout_marginStart="393dp"
+                    android:layout_marginTop="72dp"
+                    android:backgroundTint="#4D4C47"
                     android:fontFamily="@font/finger_paint"
                     android:padding="0dp"
                     android:paddingStart="0dp"
@@ -934,14 +1068,52 @@
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:text="K"
-                    android:textColor="#F1E4E1"
-                    tools:layout_editor_absoluteX="393dp"
-                    tools:layout_editor_absoluteY="72dp" />
+                    android:textColor="#F4EFDC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/button_voltar"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/_13_sem_t_tulo_20231013170618"
+        android:padding="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_info"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/_13_sem_t_tulo_20231013170705"
+        android:padding="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
