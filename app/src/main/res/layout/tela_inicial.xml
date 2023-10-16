@@ -21,8 +21,8 @@
         android:id="@+id/button_iniciar"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="136dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="50dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="49dp"
         android:fontFamily="@font/architects_daughter"
         android:text="Iniciar"
         android:textColor="#4C4B46"
@@ -31,5 +31,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#4D4C47" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="171dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="214dp"
+        android:fontFamily="@font/architects_daughter"
+        android:shadowColor="#4D4C47"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="DijkSim"
+        android:textAlignment="center"
+        android:textColor="#4C4B46"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

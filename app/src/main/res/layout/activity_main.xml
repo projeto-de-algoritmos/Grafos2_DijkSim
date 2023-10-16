@@ -7,8 +7,13 @@
     tools:context=".MainActivity">
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -1098,6 +1103,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/button_proximo"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="96dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/architects_daughter"
+        android:padding="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Próximo"
+        android:textAlignment="center"
+        android:textColor="#4C4B46"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Caminho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/architects_daughter"
+        android:textAlignment="center"
+        android:textColor="#4C4B46"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/button_info"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="35dp"
@@ -1116,4 +1159,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#C0000000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_fecharInfo"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:background="#00FFFFFF"
+                android:foreground="@drawable/_13_sem_t_tulo_20230925230401" />
+
+            <TextView
+                android:id="@+id/textView_explicacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/architects_daughter"
+                android:text="O algoritmo de Dijkstra é um método para encontrar o caminho mais curto entre dois vértices em um grafo com pesos nas arestas. Ele foi inventado pelo cientista da computação holandês Edsger Dijkstra em 1956 e publicado em 1959. O algoritmo funciona da seguinte forma: \n\n - Escolhe-se um vértice de origem e atribui-se a ele uma distância zero. Aos demais vértices, atribui-se uma distância infinita.\n\n - Cria-se um conjunto vazio de vértices visitados e uma fila de prioridade com todos os vértices, ordenados pela distância à origem.\n\n - Enquanto a fila não estiver vazia, extrai-se o vértice com menor distância e adiciona-se ao conjunto de visitados.\n\n - Para cada vértice adjacente ao vértice extraído, verifica-se se a soma da distância do vértice extraído com o peso da aresta é menor que a distância atual do vértice adjacente. Se for, atualiza-se a distância do vértice adjacente e a sua posição na fila de prioridade.\n\n - Repete-se os passos 3 e 4 até que a fila esteja vazia ou que o vértice de destino seja marcado como visitado.\n\n O algoritmo de Dijkstra pode ser usado para resolver diversos problemas que envolvem grafos, como redes de transporte, roteamento de pacotes, planejamento de trajetórias, entre outros.\nEle tem uma complexidade de tempo que depende da estrutura de dados usada para implementar a fila de prioridade. Se for usado um heap binário, por exemplo, a complexidade é O(m log n), onde m é o número de arestas e n é o número de vértices do grafo.\n\n"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
