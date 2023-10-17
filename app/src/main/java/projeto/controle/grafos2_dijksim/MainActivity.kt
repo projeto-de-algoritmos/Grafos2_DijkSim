@@ -1,8 +1,10 @@
 package projeto.controle.grafos2_dijksim
 
 import android.content.pm.ActivityInfo
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -14,15 +16,17 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var bindingInicio: TelaInicialBinding
     private lateinit var bindingMain: ActivityMainBinding
+    private var noDeDestino: Char = ' '
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window?.statusBarColor = ContextCompat.getColor(this, R.color.black)
+            window?.statusBarColor = ContextCompat.getColor(this, R.color.marrom)
         }
 
         var qtdCliques = 0
+        var noDeInicio = ' '
 
         bindingInicio = TelaInicialBinding.inflate(layoutInflater)
         bindingMain = ActivityMainBinding.inflate(layoutInflater)
@@ -35,339 +39,592 @@ class MainActivity : AppCompatActivity() {
             setContentView(bindingInicio.root)
         }
         bindingMain.buttonInfo.setOnClickListener {
-            bindingMain.info.isVisible = true
+            bindingMain.telaInfo.isVisible = true
         }
         bindingMain.buttonFecharInfo.setOnClickListener {
-            bindingMain.info.isVisible = false
+            bindingMain.telaInfo.isVisible = false
         }
 
         bindingMain.buttonA.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(0)
+                noDeInicio = 'A'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'A'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonA.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 0
             }
         }
         bindingMain.buttonB.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(1)
+                noDeInicio = 'B'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'B'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonB.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 1
             }
         }
         bindingMain.buttonC.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(2)
+                noDeInicio = 'C'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'C'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonC.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 2
             }
         }
         bindingMain.buttonD.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(3)
+                noDeInicio = 'D'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'D'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonD.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 3
             }
         }
         bindingMain.buttonE.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(4)
+                noDeInicio = 'E'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'E'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonE.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 4
             }
         }
         bindingMain.buttonF.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(5)
+                noDeInicio = 'F'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'F'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonF.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 5
             }
         }
         bindingMain.buttonG.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(6)
+                noDeInicio = 'G'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'G'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonG.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 6
             }
         }
         bindingMain.buttonH.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(7)
+                noDeInicio = 'H'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'H'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonH.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 7
             }
         }
         bindingMain.buttonI.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(8)
+                noDeInicio = 'I'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'I'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonI.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 8
             }
         }
         bindingMain.buttonJ.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(9)
+                noDeInicio = 'J'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'J'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonJ.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 9
             }
         }
         bindingMain.buttonK.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(10)
+                noDeInicio = 'K'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'K'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonK.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 10
             }
         }
         bindingMain.buttonL.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(11)
+                noDeInicio = 'L'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'L'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonL.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 11
             }
         }
         bindingMain.buttonM.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(12)
+                noDeInicio = 'M'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'M'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonM.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 12
             }
         }
         bindingMain.buttonN.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(13)
+                noDeInicio = 'N'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'N'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonN.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 13
             }
         }
         bindingMain.buttonO.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(14)
+                noDeInicio = 'O'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'O'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonO.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 14
             }
         }
         bindingMain.buttonP.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(15)
+                noDeInicio = 'P'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'P'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonP.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 15
             }
         }
         bindingMain.buttonQ.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(16)
+                noDeInicio = 'Q'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'Q'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonQ.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 16
             }
         }
         bindingMain.buttonR.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(17)
+                noDeInicio = 'R'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'R'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonR.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 17
             }
         }
         bindingMain.buttonS.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(18)
+                noDeInicio = 'S'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'S'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonS.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 18
             }
         }
         bindingMain.buttonT.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(19)
+                noDeInicio = 'T'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'T'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonT.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 19
             }
         }
         bindingMain.buttonU.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(20)
+                noDeInicio = 'U'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'U'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonU.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 20
             }
         }
         bindingMain.buttonV.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(21)
+                noDeInicio = 'V'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'V'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonV.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 21
             }
         }
         bindingMain.buttonW.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(22)
+                noDeInicio = 'W'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'W'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonW.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 22
             }
         }
         bindingMain.buttonX.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(23)
+                noDeInicio = 'X'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'X'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonX.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 23
             }
         }
         bindingMain.buttonY.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(24)
+                noDeInicio = 'Y'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'Y'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonY.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 24
             }
         }
         bindingMain.buttonZ.setOnClickListener {
             qtdCliques++
             if (qtdCliques == 1) {
-                bindingMain.buttonProximo.isVisible = true
-                criaGrafo(25)
+                noDeInicio = 'Z'
+                bindingMain.textViewFila.text = "Escolha um nó de destino"
+                criaGrafo(noDeInicio)
             } else {
+                noDeDestino = 'Z'
+                bindingMain.textViewFila.text = "Iniciando trajeto de " + noDeInicio + " para " + noDeDestino
+                bindingMain.buttonZ.setBackgroundColor(ContextCompat.getColor(this, R.color.laranja))
+                bindingMain.buttonProximo.isVisible = true
                 mudaEstadoDosBotoes(false)
-                val destino = 25
             }
         }
     }
-    data class Edge(val to: Int, val cost: Int) : Comparable<Edge> {
+    data class Edge(var to: Char, val cost: Int, var from: Char) : Comparable<Edge> {
         override fun compareTo(other: Edge) = cost - other.cost
     }
 
-    fun dijkstra(graph: List<List<Edge>>, start: Int): IntArray {
+    fun dijkstra(graph: List<List<Edge>>, start: Char) {
         val pq = PriorityQueue<Edge>()
         val dist = IntArray(graph.size) { Int.MAX_VALUE }
-        dist[start] = 0
-        pq.add(Edge(start, 0))
+        val set = CharArray(26)
 
-        while (pq.isNotEmpty()) {
-            val cur = pq.poll()
-            if (cur.cost > dist[cur.to]) continue
+        dist[start.code-65] = 0
+        pq.add(Edge(start, 0, start))
 
-            for (edge in graph[cur.to]) {
-                val nextDist = dist[cur.to] + edge.cost
-                if (nextDist < dist[edge.to]) {
-                    dist[edge.to] = nextDist
-                    pq.add(Edge(edge.to, nextDist))
-                }
-            }
+        when (start) {
+            'A' -> bindingMain.buttonA.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'B' -> bindingMain.buttonB.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'C' -> bindingMain.buttonC.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'D' -> bindingMain.buttonD.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'E' -> bindingMain.buttonE.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'F' -> bindingMain.buttonF.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'G' -> bindingMain.buttonG.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'H' -> bindingMain.buttonH.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'I' -> bindingMain.buttonI.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'J' -> bindingMain.buttonJ.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'K' -> bindingMain.buttonK.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'L' -> bindingMain.buttonL.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'M' -> bindingMain.buttonM.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'N' -> bindingMain.buttonN.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'O' -> bindingMain.buttonO.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'P' -> bindingMain.buttonP.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'Q' -> bindingMain.buttonQ.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'R' -> bindingMain.buttonR.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'S' -> bindingMain.buttonS.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'T' -> bindingMain.buttonT.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'U' -> bindingMain.buttonU.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'V' -> bindingMain.buttonV.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'W' -> bindingMain.buttonW.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'X' -> bindingMain.buttonX.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'Y' -> bindingMain.buttonY.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+            'Z' -> bindingMain.buttonZ.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
         }
 
-        return dist
-    }
-/*
-    fun verificaVisinhos(graph: List<List<Edge>>) {
+        var atual = Edge(' ', 0, ' ')
+        bindingMain.buttonProximo.setOnClickListener {
+            if (pq.isNotEmpty() && atual.to != noDeDestino) {
+                atual = pq.poll()
+                set[atual.to.code-65] = atual.from
+                if (atual.cost > dist[atual.to.code-65]) {
+                    // Pintar as arestas não utilizadas
+                } else {
+                    for (edge in graph[atual.to.code-65]) {
+                        val nextDist = dist[atual.to.code-65] + edge.cost
+                        if (nextDist < dist[edge.to.code-65]) {
+                            dist[edge.to.code-65] = nextDist
+                            pq.add(Edge(edge.to, nextDist, atual.to))
+                            when (edge.to) {
+                                'A' -> bindingMain.buttonA.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'B' -> bindingMain.buttonB.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'C' -> bindingMain.buttonC.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'D' -> bindingMain.buttonD.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'E' -> bindingMain.buttonE.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'F' -> bindingMain.buttonF.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'G' -> bindingMain.buttonG.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'H' -> bindingMain.buttonH.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'I' -> bindingMain.buttonI.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'J' -> bindingMain.buttonJ.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'K' -> bindingMain.buttonK.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'L' -> bindingMain.buttonL.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'M' -> bindingMain.buttonM.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'N' -> bindingMain.buttonN.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'O' -> bindingMain.buttonO.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'P' -> bindingMain.buttonP.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'Q' -> bindingMain.buttonQ.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'R' -> bindingMain.buttonR.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'S' -> bindingMain.buttonS.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'T' -> bindingMain.buttonT.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'U' -> bindingMain.buttonU.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'V' -> bindingMain.buttonV.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'W' -> bindingMain.buttonW.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'X' -> bindingMain.buttonX.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'Y' -> bindingMain.buttonY.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                                'Z' -> bindingMain.buttonZ.setBackgroundColor(ContextCompat.getColor(this, R.color.verde))
+                            }
+                        }
+                    }
+                }
+                bindingMain.textViewFila.text = pq.toString()
+                when (atual.to) {
+                    'A' -> bindingMain.buttonA.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'B' -> bindingMain.buttonB.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'C' -> bindingMain.buttonC.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'D' -> bindingMain.buttonD.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'E' -> bindingMain.buttonE.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'F' -> bindingMain.buttonF.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'G' -> bindingMain.buttonG.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'H' -> bindingMain.buttonH.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'I' -> bindingMain.buttonI.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'J' -> bindingMain.buttonJ.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'K' -> bindingMain.buttonK.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'L' -> bindingMain.buttonL.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'M' -> bindingMain.buttonM.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'N' -> bindingMain.buttonN.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'O' -> bindingMain.buttonO.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'P' -> bindingMain.buttonP.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'Q' -> bindingMain.buttonQ.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'R' -> bindingMain.buttonR.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'S' -> bindingMain.buttonS.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'T' -> bindingMain.buttonT.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'U' -> bindingMain.buttonU.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'V' -> bindingMain.buttonV.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'W' -> bindingMain.buttonW.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'X' -> bindingMain.buttonX.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'Y' -> bindingMain.buttonY.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                    'Z' -> bindingMain.buttonZ.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
+                }
+            } else {
+                var aux = atual
+                var soma = 0
+                bindingMain.buttonProximo.isVisible = false
+                while (aux.to != start) {
+                    soma = soma + aux.cost
+                    when (aux.to) {
+                         'A' -> bindingMain.buttonA.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'B' -> bindingMain.buttonB.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'C' -> bindingMain.buttonC.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'D' -> bindingMain.buttonD.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'E' -> bindingMain.buttonE.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'F' -> bindingMain.buttonF.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'G' -> bindingMain.buttonG.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'H' -> bindingMain.buttonH.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'I' -> bindingMain.buttonI.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'J' -> bindingMain.buttonJ.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'K' -> bindingMain.buttonK.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'L' -> bindingMain.buttonL.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'M' -> bindingMain.buttonM.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'N' -> bindingMain.buttonN.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'O' -> bindingMain.buttonO.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'P' -> bindingMain.buttonP.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'Q' -> bindingMain.buttonQ.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'R' -> bindingMain.buttonR.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'S' -> bindingMain.buttonS.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'T' -> bindingMain.buttonT.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'U' -> bindingMain.buttonU.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'V' -> bindingMain.buttonV.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'W' -> bindingMain.buttonW.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'X' -> bindingMain.buttonX.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'Y' -> bindingMain.buttonY.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                         'Z' -> bindingMain.buttonZ.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                     }
+                     aux.to = set[aux.to.code-65]
+                }
+                when (start) {
+                    'A' -> bindingMain.buttonA.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'B' -> bindingMain.buttonB.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'C' -> bindingMain.buttonC.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'D' -> bindingMain.buttonD.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'E' -> bindingMain.buttonE.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'F' -> bindingMain.buttonF.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'G' -> bindingMain.buttonG.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'H' -> bindingMain.buttonH.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'I' -> bindingMain.buttonI.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'J' -> bindingMain.buttonJ.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'K' -> bindingMain.buttonK.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'L' -> bindingMain.buttonL.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'M' -> bindingMain.buttonM.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'N' -> bindingMain.buttonN.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'O' -> bindingMain.buttonO.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'P' -> bindingMain.buttonP.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'Q' -> bindingMain.buttonQ.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'R' -> bindingMain.buttonR.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'S' -> bindingMain.buttonS.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'T' -> bindingMain.buttonT.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'U' -> bindingMain.buttonU.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'V' -> bindingMain.buttonV.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'W' -> bindingMain.buttonW.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'X' -> bindingMain.buttonX.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'Y' -> bindingMain.buttonY.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                    'Z' -> bindingMain.buttonZ.setBackgroundColor(ContextCompat.getColor(this, R.color.azul))
+                }
+                bindingMain.textViewFila.text = "A menor distância entre " + start + " e " + noDeDestino + " é " + dist[noDeDestino.code-65]
 
-    }*/
-    fun criaGrafo(primeiroVertice: Int) {
+            }
+        }
+    }
+
+    fun criaGrafo(primeiroVertice: Char) {
         val graph = listOf(
-            listOf(Edge(1, 3)),                 // arestas do vértice A
-            listOf(Edge(0, 3), Edge(4, 6), Edge(5, 4), Edge(7, 27)), // arestas do vértice B
-            listOf(Edge(4, 5), Edge(6, 10)),        // arestas do vértice C
-            listOf(Edge(6, 12)),
-            listOf(Edge(1, 6), Edge(2, 5), Edge(6, 7)),
-            listOf(Edge(1, 4), Edge(9, 4)),
-            listOf(Edge(2, 10), Edge(3, 12), Edge(4, 7), Edge(8, 3), Edge(11, 20)),
-            listOf(Edge(1, 27), Edge(9, 12), Edge(11, 6)),
-            listOf(Edge(6, 3), Edge(11, 18)),
-            listOf(Edge(5, 4), Edge(7, 12), Edge(13, 10)),
-            listOf(Edge(13, 15), Edge(14, 9)),
-            listOf(Edge(6, 20), Edge(7, 6), Edge(8, 18), Edge(12, 5), Edge(13, 8)),
-            listOf(Edge(11, 5), Edge(13, 12), Edge(14, 17), Edge(15, 2)),
-            listOf(Edge(9, 10), Edge(10, 15), Edge(11, 8), Edge(12, 12), Edge(14, 5)),
-            listOf(Edge(10, 9), Edge(12, 17), Edge(13, 5), Edge(17, 1), Edge(18, 5)),
-            listOf(Edge(12, 2), Edge(19, 7)),
-            listOf(Edge(18, 8), Edge(19, 19)),
-            listOf(Edge(14, 1), Edge(18, 4)),
-            listOf(Edge(14, 5), Edge(16, 8), Edge(17, 4), Edge(19, 12), Edge(21, 9), Edge(22, 4), Edge(25, 15)),
-            listOf(Edge(12, 6), Edge(15, 7), Edge(16, 19), Edge(18, 12), Edge(20, 4)),
-            listOf(Edge(19, 4), Edge(22, 2), Edge(23, 6), Edge(24, 3)),
-            listOf(Edge(18, 9), Edge(25, 9)),
-            listOf(Edge(18, 4), Edge(20, 2), Edge(24, 1)),
-            listOf(Edge(20, 6), Edge(24, 2)),           // arestas do vértice X
-            listOf(Edge(20, 3), Edge(22, 1), Edge(23, 2)),  // arestas do vértice Y
-            listOf(Edge(18, 15), Edge(21, 9))           // arestas do vértice Z
+            listOf(Edge('B', 3, ' ')),                 // arestas do vértice A
+            listOf(Edge('A', 3, ' '), Edge('E', 6, ' '), Edge('F', 4, ' '), Edge('H', 27, ' ')), // arestas do vértice B
+            listOf(Edge('E', 5, ' '), Edge('G', 10, ' ')),        // arestas do vértice C
+            listOf(Edge('G', 12, ' ')),
+            listOf(Edge('B', 6, ' '), Edge('C', 5, ' '), Edge('G', 7, ' ')),
+            listOf(Edge('B', 4, ' '), Edge('J', 4, ' ')),
+            listOf(Edge('C', 10, ' '), Edge('D', 12, ' '), Edge('E', 7, ' '), Edge('I', 3, ' '), Edge('L', 20, ' ')),
+            listOf(Edge('B', 27, ' '), Edge('J', 12, ' '), Edge('L', 6, ' ')),
+            listOf(Edge('G', 3, ' '), Edge('L', 18, ' ')),
+            listOf(Edge('F', 4, ' '), Edge('H', 12, ' '), Edge('N', 10, ' ')),
+            listOf(Edge('N', 15, ' '), Edge('O', 9, ' ')),
+            listOf(Edge('G', 20, ' '), Edge('H', 6, ' '), Edge('I', 18, ' '), Edge('M', 5, ' '), Edge('N', 8, ' ')),
+            listOf(Edge('L', 5, ' '), Edge('N', 12, ' '), Edge('O', 17, ' '), Edge('P', 2, ' ')),
+            listOf(Edge('J', 10, ' '), Edge('K', 15, ' '), Edge('L', 8, ' '), Edge('M', 12, ' '), Edge('O', 5, ' ')),
+            listOf(Edge('K', 9, ' '), Edge('M', 17, ' '), Edge('N', 5, ' '), Edge('R', 1, ' '), Edge('S', 5, ' ')),
+            listOf(Edge('M', 2, ' '), Edge('T', 7, ' ')),
+            listOf(Edge('S', 8, ' '), Edge('T', 19, ' ')),
+            listOf(Edge('O', 1, ' '), Edge('S', 4, ' ')),
+            listOf(Edge('O', 5, ' '), Edge('Q', 8, ' '), Edge('R', 4, ' '), Edge('T', 12, ' '), Edge('V', 9, ' '), Edge('W', 4, ' '), Edge('Z', 15, ' ')),
+            listOf(Edge('M', 6, ' '), Edge('P', 7, ' '), Edge('Q', 19, ' '), Edge('S', 12, ' '), Edge('U', 4, ' ')),
+            listOf(Edge('T', 4, ' '), Edge('W', 2, ' '), Edge('X', 6, ' '), Edge('Y', 3, ' ')),
+            listOf(Edge('S', 9, ' '), Edge('Z', 9, ' ')),
+            listOf(Edge('S', 4, ' '), Edge('U', 2, ' '), Edge('Y', 1, ' ')),
+            listOf(Edge('U', 6, ' '), Edge('Y', 2, ' ')),           // arestas do vértice X
+            listOf(Edge('U', 3, ' '), Edge('W', 1, ' '), Edge('X', 2, ' ')),  // arestas do vértice Y
+            listOf(Edge('S', 15, ' '), Edge('V', 9, ' '))           // arestas do vértice Z
         )
 
-        val dist = dijkstra(graph, primeiroVertice)
-        /*
-        bindingMain.buttonProximo.setOnClickListener {
-            verificaVisinhos(graph)
-        }*/
-        //println(dist.joinToString(", ")) // prints: 0, 2, 4, 5, 8
-        bindingMain.textViewCaminho.text = dist.joinToString(", ")
+        dijkstra(graph, primeiroVertice)
     }
 
     fun mudaEstadoDosBotoes(estado: Boolean) {
